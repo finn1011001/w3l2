@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="w3l2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-05-sZD">
+                                <rect key="frame" x="112.5" y="90" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="CTl-Yd-5eB"/>
+                                    <constraint firstAttribute="height" constant="30" id="gCf-bH-aBe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="慢"/>
+                                    <segment title="中"/>
+                                    <segment title="快"/>
+                                    <segment title="飛"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7s1-RE-krs"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-nE-EFt">
+                                <rect key="frame" x="110.5" y="148" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="AHb-Ad-4bK"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="zyw-lN-89J"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UWh-05-sZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="TBG-TH-TK0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gGm-nE-EFt" secondAttribute="bottom" constant="490" id="XG5-1I-xQc"/>
+                            <constraint firstItem="gGm-nE-EFt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmL-FP-ecB"/>
+                            <constraint firstItem="UWh-05-sZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rtv-2J-pSm"/>
+                            <constraint firstItem="gGm-nE-EFt" firstAttribute="width" secondItem="UWh-05-sZD" secondAttribute="width" id="xYb-7T-Qh2"/>
+                            <constraint firstItem="gGm-nE-EFt" firstAttribute="top" secondItem="UWh-05-sZD" secondAttribute="bottom" constant="28" id="yCS-CR-QHO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentAction" destination="UWh-05-sZD" id="3fV-Tb-sbx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="18.440779610194905"/>
+        </scene>
+    </scenes>
+</document>
